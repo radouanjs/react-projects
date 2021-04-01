@@ -1,0 +1,67 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@font-face{
+	src: url('./font/Poppins-Regular.otf');
+	font-family: "Poppins";
+}
+body{
+	background-color: #f1f5f8;
+	color: #222;
+	font-family: "Poppins";
+	font-weight: normal;
+}
+.lorem-ipsum{
+	width: 80vw;
+	margin: 50px auto;
+	text-align: center;
+}
+.lorem-ipsum h1{
+	text-transform: uppercase;
+}
+.outputs p{
+	font-size: 0.8rem;
+	margin: 1rem auto;
+	width: 50%;
+	text-align: left;
+}
+.inputs{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1rem 0 2rem 0;
+}
+.inputs #number, .inputs button{
+	width: 50px;
+	border-radius: 0.5rem;
+	border: none;
+	outline: none;
+	height: 25px;
+	color: inherit;
+	padding-left: 0.3rem;
+	font-size: 1.2rem;
+	margin: 0.3rem;
+}
+.inputs button{
+	font-size: 1.1rem;
+	padding: 0.1rem 0.3rem;
+	width: 95px;
+	background-color: rgba(0, 0, 255, 0.5);
+	color: #fff;
+	letter-spacing: 0.1rem;
+	cursor: pointer;
+}
+.inputs button:hover{
+	opacity: 0.7;
+	color: #000;
+}
+@media screen and (max-width: 768px){
+	.outputs p{
+	    font-size: 0.8rem;
+	    margin: 1rem auto;
+	    width: 100%;
+	    text-align: left;
+    }   
+}
