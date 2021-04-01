@@ -1,0 +1,96 @@
+body{
+	background-color: #f0f0f0;
+}
+header{
+	background-color: #fbfaff;
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2.5rem;
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	position: relative;
+}
+header nav ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header nav ul li{
+	margin: 0 0.7rem;
+}
+header nav ul li a{
+	color: #555 !important;
+}
+.social__media a {
+	margin: 0 0.5rem;
+	font-size: 1.5rem;
+}
+.bars{
+	display: none;
+}
+.logo {
+	transition: all 1s ease;
+	animation: lightning 1s ease infinite;
+}
+@keyframes lightning {
+	0% {
+		box-shadow: 0 0 7px transparent;
+	}
+	100% {
+		box-shadow: 0 0 7px gold;
+	}
+}
+.bars, .logo{
+    font-size: 1.5rem;
+    color: #555;
+    cursor: pointer;
+}
+.logo span, .social__media{
+	color: #581b98;
+}
+@media screen and (max-width: 768px) {
+    header {
+    	padding: 0 1rem;
+    }
+    header nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fbfaff;
+        width: 100%;
+        overflow: hidden;
+        text-align: left;
+        transition: all 0.2s ease; 
+        height: 0px;
+    }
+    .social__media {
+    	display: none;
+    }
+    header nav ul {
+    	margin: 0;
+    	padding: 0;
+    	flex-direction: column;
+    	align-items: flex-start;
+    	width: 100%;
+    }
+    header nav ul li {
+    	margin: 0;
+    	width: 100%;
+    }
+    header nav ul  li a{
+    	display: block;
+    	padding: 0.5rem 1rem;
+    	width: 100%;
+    	transition: transform 0.1s ease;
+    }
+    header nav ul li a:hover {
+	    background-color: #581b98;
+	    color: #f3f3f3 !important;
+	    transform: scale(1.05);
+    }
+    .bars, .logo{
+    	display: block;
+    }
+}
