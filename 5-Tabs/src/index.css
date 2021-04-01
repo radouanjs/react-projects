@@ -1,0 +1,103 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@font-face{
+	src: url('./font/Poppins-Regular.otf');
+	font-family: "Poppins";
+}
+body{
+	background-color: #f1f5f8;
+	color: #222;
+	font-family: "Poppins";
+	font-weight: normal;
+}
+.expirience{
+	width: 80vw;
+	margin: 150px auto;
+}
+header{
+	text-align: center;
+	font-size: 1.7rem;
+}
+header::after{
+	content: "";
+	display: block;
+	width: 85px;
+	height: 5px;
+	background-color: lightblue;
+	margin: 0 auto;
+}
+.main{
+	display: flex;
+	margin-top: 2.5rem;
+}
+.main a{
+	display: inline-block;
+	text-decoration: none;
+	color: #666666;
+	background-color: lightblue;
+	border-radius: 5px;
+	padding: 0 0.5rem;
+	margin: 0.7rem 0;
+}
+.date{
+	margin: 0.5rem 0;
+	color: #888888;
+}
+.work-details p{
+	display: block;
+	font-size: 0.9rem;
+	margin: 1rem 0;
+}
+.work-details p::before{
+	content: ">>";
+	display: block;
+	float: left;
+	padding-right: 1.5rem;
+	margin-top: 0.8rem;
+	color: rgba(0, 0, 255, 0.8);
+	font-weight: bold;
+}
+aside.companies{
+	padding: 0 1.5rem 1.5rem 1.5rem;
+	flex: 0 0 20%;
+}
+.work{
+	flex: 0 0 80%;
+}
+aside.companies button{
+	background-color: transparent;
+	outline: none;
+	border: none;
+	padding: 0.5rem 1rem;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	font-weight: bold;
+	color: #555555;
+	cursor: pointer;
+}
+aside.companies button.active{
+	color: lightblue;
+	border-left: 3px solid lightblue;
+}
+
+@media screen and (max-width: 768px){
+	.main{
+		flex-direction: column;
+	}
+	aside.companies{
+	    padding: 0 1.5rem 1.5rem 1.5rem;
+	    flex: 0 0 100%;
+	    text-align: center;
+}
+   .work{
+	    flex: 0 0 100%;
+    }
+    aside.companies button.active{
+	   color: lightblue;
+	   border-bottom: 3px solid lightblue;
+	   border-left: none;
+    }
+}
