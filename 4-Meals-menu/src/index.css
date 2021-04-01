@@ -1,0 +1,94 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+@font-face{
+	src: url('./font/Poppins-Regular.otf');
+	font-family: "Poppins";
+}
+body{
+	background-color: #abd1c6;
+	color: #222;
+	font-family: "Poppins";
+}
+.menu{
+	margin: 2rem;
+}
+header, nav{
+	text-align: center;
+	margin: 1rem 0;
+}
+header::after{
+	content: "";
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+	height: 3px;
+	background-color: #e8e4e6;
+}
+.menu h1{
+	color: #fffff1;
+}
+.menu p{
+	color: #0f3433;
+}
+.menu button{
+	background-color: transparent;
+	font-weight: bold;
+	cursor: pointer;
+	color:  #001e1d;
+	outline: none;
+	border: none;
+	padding: 0.5rem 0.7rem;
+	margin: 0 0.5rem;
+	border-radius: 0.3rem;
+	text-transform: capitalize;
+}
+.menu button:focus{
+	background-color: #e16162;
+}
+.meals{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.meal{
+    background-color: #e8e4e6;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    display: flex;
+    height: 150px;
+    width: 520px;
+}
+.meal .title-and-price{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #abd1c6;
+}
+p.price{
+	color: #e16162;
+}
+p.title{
+	font-weight: bold;
+}
+.meal .description{
+	margin-top: 0.7rem;
+	font-size: 0.9rem;
+}
+.meal-image{
+    flex: 2;
+    height: 100%;
+}
+.meal-image img{
+	width: 100%;
+	height: 100%;
+	 border-radius: 0.3rem;
+}
+.info{
+	flex: 3;
+	margin-left: 0.5rem;
+}
