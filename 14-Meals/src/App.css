@@ -1,0 +1,238 @@
+body {
+	background-color: #fee9ee;
+}
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	padding: 0rem 1.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f7f7fc;
+	color: #818D8F;
+	box-shadow: 0 0 5px #B65550;
+
+}
+nav .logo h1 {
+	color: #818D8F;
+}
+nav ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+nav ul li {
+   padding: 0.5rem 1rem;
+} 
+.search {
+	width: 420px;
+	margin: 100px auto 0 auto;
+	text-align: center;
+}
+.search input {
+	width: 100%;
+	height: 35px;
+	border-radius: 5px;
+	outline: none;
+	border: none;
+	text-indent: 7px;
+}
+.search input:focus {
+	box-shadow: 0 0 7px #B65550;
+}
+.error-page {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.error-page div {
+	width: 400px;
+	height: 400px;
+	box-shadow: 0 0 7px #B65550;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.error-page div h1 {
+	font-size: 5rem;
+	letter-spacing: 0.5rem;
+	color: #B65550;
+}
+main .meals {
+	width: 70vw;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main h1 {
+	text-align: center;
+	margin-top: 50px;
+}
+main h1:first-child::before {
+	content: "🥘 ";
+}
+main h1:first-child::after {
+	content: " 🥘";
+}
+.meal {
+	flex: 30%;
+	max-width: 30%;
+    box-shadow: 3px 3px 5px #BF958D;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0.5rem;
+    background-color: #F8ECED;
+}
+.meal img {
+	width: 100%;
+	object-fit: contain;
+}
+.meal-info h3 {
+	text-align: center;
+	color: #B65550;
+}
+.meal-info div {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: #818D8F;
+}
+.loading {
+	width: 300px;
+	margin: 0 auto;
+	margin-top: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.loading div {
+	position: relative;
+	width: 45px;
+	height: 120px;
+	margin: 0 0.5rem;
+}
+.loading div::after {
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: gray;
+	animation-name: grow;
+	animation-duration: 0.7s;
+	animation-direction: alternate;
+	animation-fill-mode: linear;
+	animation-iteration-count: infinite;
+}
+.loading div:nth-child(1)::after {
+	animation-delay: 0.3s;
+}
+.loading div:nth-child(2)::after {
+	animation-delay: 0.5s;
+}
+.loading div:nth-child(3)::after {
+	animation-delay: 0.7s;
+}
+@keyframes grow {
+    0% {
+    	height: 0%;
+    }
+    100% {
+    	height: 100%;
+    }
+}
+
+.meal-description {
+	padding:5rem 0;
+}
+.meal-description img {
+	display: block;
+	width: 60vw;
+	height: 250px;
+	object-fit: cover;
+	margin: 0 auto;
+	border-radius: 5px;
+}
+.meal-description .description {
+	width: 60vw;
+	margin: 0 auto;
+}
+.meal-description .description h1 {
+	text-align: center;
+	letter-spacing: 0.3rem;
+	font-size: 2rem;
+}
+.meal-description .description h1 + p{
+	text-align: center;
+}
+.meal-description .description h1::after {
+	content: "🌴🌴🌴"
+}
+.meal-description .description h1::before {
+	content: "🌴🌴🌴"
+}
+.meal-description .instructions ul {
+	list-style: decimal;
+}
+.meal-description .instructions p {
+	line-height: 1.5rem;
+}
+.about {
+	width: 50vw;
+	margin: 0 auto;
+	margin-top: 150px;
+	line-height: 1.7rem;
+}
+.about h1 {
+	text-align: center;
+}
+@media only screen and (max-width: 768px) {
+	main .meals {
+		width: 80vw;
+	}
+	.meal {
+		flex: 40%;
+		max-width: 40%;
+	}
+	.meal-description img {
+	   width: 80vw;
+    }
+    .meal-description .description h1::after {
+	   content: "🌴"
+    }
+    .meal-description .description h1::before {
+	   content: "🌴"
+    }
+    .about {
+	   width: 75vw;
+    }
+}
+@media only screen and (max-width: 425px) {
+	main .meals  {
+		width: 90vw;
+	}
+	.meal {
+		flex: 100%;
+		max-width: 100%;
+	}
+	.meal-description img, .meal-description .description {
+	   width: 95vw;
+    }
+    .meal-description .description h1::after {
+	   content: "🌴"
+    }
+    .meal-description .description h1::before {
+	   content: "🌴"
+    }
+    .about {
+	   width: 85vw;
+    }
+}
