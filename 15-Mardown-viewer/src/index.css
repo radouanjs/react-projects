@@ -1,0 +1,28 @@
+/*** CSS RESET ***/
+
+* { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body,
+input,
+button,
+select,
+textarea { font: normal 1rem sans-serif; color: #222222; }
+
+a { text-decoration: none; }
+a:link { color: #6a26cd; }
+a:hover { color: #431488; }
+a:active { color: #6a26cd; }
+a:visited { color: #6a26cd; }
+
+html, body, .container { height: 100%; }
+
+ul, ol { margin: 0 0 0 1rem; padding: 0 0 0 1rem; list-style: none; }
+
+table { border-collapse: collapse; }
+th { text-align: left; }
+td { vertical-align: middle; }
+
+/****************************************/
+
